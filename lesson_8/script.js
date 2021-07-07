@@ -1,23 +1,23 @@
 const obj = {
   name: 'Alina',
-  age: 23,
-  adress: {
-    country: 'UA',
+  age: null,
+  adress: { 
+    country: 'UA', 
     city: 'Kyiv'
-  }
+}
 }
 const objCopy = deepClone(obj);
 
 function deepClone(obj) {
-  if (typeof obj === 'string' || typeof obj === 'number') {
+  if (obj!==null && typeof obj === 'string' || typeof obj === 'number') {
     return obj;
-  } else if (typeof obj === 'object') {
+  } else if (obj!==null && typeof obj === 'object') {
     let res = {};
     for (let k in obj) {
       res[k] = deepClone(obj[k]);
-    }
+        }
     return res;
-  }
+  }else return obj
 }
 objCopy.adress.city = "Odessa";
 console.log(obj);
