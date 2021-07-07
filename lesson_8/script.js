@@ -20,6 +20,5 @@ function deepClone(obj) {
   }
 }
 objCopy.adress.city = "Odessa";
-
 console.log(obj);
 console.log(objCopy);
