@@ -9,7 +9,7 @@ const obj = {
 const objCopy = deepClone(obj);
 
 function deepClone(obj) {
-  if (obj!==null && typeof obj === 'string' || typeof obj === 'number') {
+  if (obj!== null && typeof obj === 'string' || typeof obj === 'number') {
     return obj;
   } else if (obj!==null && typeof obj === 'object') {
     let res = {};
