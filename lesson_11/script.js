@@ -8,11 +8,6 @@ function onClickHandler(event) {
   document.getElementById('listEvents').append(elem);
   elem.append(btnRemove);
   inputElem.value = '';
-
-  let items = document.querySelectorAll('li');
-
-  items.onClick = onClickItems(items);
-  items.stopPropagation;
 }
 
 function createElemLi(inputEl) {
@@ -20,30 +15,21 @@ function createElemLi(inputEl) {
   item.className = 'yellow';
   item.id = 'item';
   item.textContent = inputEl.value;
+  item.addEventListener('click', onClickItem)
   return item;
 }
 
-function createDelButton(el) {
+function createDelButton() {
   const btnRemove = document.createElement("span");
-  btnRemove.textContent = "  " + "x";
+  btnRemove.textContent = "    " + "x";
   btnRemove.className = "delete-button";
-
-  btnRemove.addEventListener('click', removeParentElement(el));
+  btnRemove.addEventListener('click', removeParentElement);
   return btnRemove;
 }
 
 function removeParentElement(event) {
 
-  event.remove();
-}
-
-function onClickItems(event) {
-
-  for (let i = 0; i < event.length; i++) {
-
-    event[i].addEventListener('click', onClickItem);
-    event.stopPropagation;
-  }
+  event.target.parentNode.remove();
 }
 
 function onClickItem(event) {
