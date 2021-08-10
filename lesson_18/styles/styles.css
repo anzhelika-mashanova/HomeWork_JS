@@ -1,0 +1,22 @@
+.container {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.input-info {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.btn-login {
+  font-size: 24px;
+  background-color: #6ae975;
+  padding: 10px;
+}
+.placeholder {
+  font-size: 24px;
+  padding: 10px;
+}
+.vision-hidden{
+  display: none;
+}
