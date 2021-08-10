@@ -14,11 +14,11 @@ function body() {
             event.preventDefault();
             let inputElem = document.getElementById('textInput');
             if (inputElem.value == "") {
-                alert("enter login")
+                alert("enter login");
                 body();
             } else {
                 let storageValue = localStorage.setItem("login", inputElem.value);
-                sessionStorage.setItem("login", inputElem.value)
+                sessionStorage.setItem("login", inputElem.value);
                 containerDiv.classList.add('vision-hidden');
                 welcome.textContent = "welcome " + inputElem.value;
             }
