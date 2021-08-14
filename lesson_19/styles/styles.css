@@ -1,0 +1,25 @@
+#clock {
+    font-family: sans-serif;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #7b40c7;
+    text-shadow: 0 0 20px #0b91a7;
+}
+
+.time {
+    letter-spacing: 0.05em;
+    font-size: 80px;
+    padding: 5px 0;
+}
+
+.date {
+    letter-spacing: 0.1em;
+    font-size: 24px;
+}
+
+
+
+
