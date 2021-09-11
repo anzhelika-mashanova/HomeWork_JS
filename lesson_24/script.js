@@ -28,10 +28,11 @@ function getRandomIndex() {
         return val;
     };
 }
+
 // для проверки на выгриш
 function getWinIndex() {
     let count = 0;
-    let availableIdx = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ];
+    let availableIdx = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
     return function () {
 
         const index = count++;
@@ -69,8 +70,8 @@ function onTileClick(e) {
     moves(countMoves);
     countMoves++;
     if (won(TILES)) {
-        const el =document.getElementById("tiles");
-        el.textContent="congratulation - you won";
+        const el = document.getElementById("tiles");
+        el.textContent = "congratulation - you won";
         console.log("You won!");
     } else {
         console.log("keep trying");
@@ -111,33 +112,31 @@ function findTileCoordById(id) {
 }
 
 function won(arr) {
-    let count = 1;
     if (arr[3][3].textContent !== "") {
         return false;
-    }else{
-    for (let i = 0; i < 4; i++) {
-        for (let j = 0; j < 4; j++) {
-            if (arr[i][j].textContent == count++||arr[i][j].textContent=="") {
-            }else{
+    } else {
+        let array = arr.flat();
+        for (let i = 0; i < array.length - 1; i++) {
+            if (array[i].textContent != (i + 1)) {
                 return false;
             }
         }
     }
-}
     return true;
 }
 
 function solvable(arr) {
     let kDisorder = 0;
-    for (let i = 1; i < arr.length - 1; i++) {
-        for (let j = i - 1; j >= 0; j--) {
-            if (arr[j] > arr[i]) {
-                kDisorder++;
+
+        for (let i = 1; i < 4; i++) {
+            for (let j = 0; j < 4; j++) {
+                if (arr[i][j].textContent > arr[j][i].textContent) {
+                    kDisorder++;
+                }
             }
         }
-    }
-    if (!(kDisorder % 2)) {
-        swapTiles(1)
+    if (kDisorder % 2!==0) {
+        initGame()
     }
 }
 
@@ -146,5 +145,3 @@ function moves(count) {
     container.innerText = 'moves = ' + count;
 
 }
-
-
