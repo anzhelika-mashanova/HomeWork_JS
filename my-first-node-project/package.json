@@ -1,0 +1,22 @@
+{
+  "name": "my-first-node-project",
+  "version": "1.0.0",
+  "description": "firstProject",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anzhelika-mashanova/HomeWork_JS.git"
+  },
+  "author": "AnzhelikaMashanova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anzhelika-mashanova/HomeWork_JS/issues"
+  },
+  "homepage": "https://github.com/anzhelika-mashanova/HomeWork_JS#readme",
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
+}
