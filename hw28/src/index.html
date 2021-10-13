@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Chat</title>
+    </head>
+    <body>
+    <div class="log-in" id="login-container">
+        <form>
+            <input type="text" name="user name" id="username" placeholder="enter user name">
+            <button id="btn-log">LogIn</button>
+        </form>
+    </div>
+    <div class="container hidden" id="chat-container">
+        <button id="logOut" class="logOut">LogOut</button>
+        <div class="sidebar" id="authorMsg">
+            <ul id="authorList">
+
+            </ul>
+        </div>
+        <div class="wrapper">
+
+            <div class="log" id="log"></div>
+
+        <form class="chatForm" id="chatForm">
+            <textarea name="message" id="message" placeholder ="Type your message" rows="3"></textarea>
+            <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+            <i class="fa fa-file-image-o"></i>
+
+            <button id="sendBtn">Send</button>
+
+        </form>
+        </div>
+    </div>
+<!--        <form id="chatForm">-->
+<!--            <input type="text" name="author" id="author" />-->
+<!--            <input type="text" name="message" id="message" />-->
+<!--            <button id="sendBtn">Send</button>-->
+<!--        </form>-->
+    </body>
+</html>
